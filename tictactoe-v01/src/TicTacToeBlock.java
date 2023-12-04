@@ -1,8 +1,7 @@
 /**
  * The TicTacToeBlock class represents a given block in the game.
  */
-public class TicTacToeBlock
-{
+public class TicTacToeBlock {
     /**
      * The game that contains this block
      */
@@ -25,18 +24,18 @@ public class TicTacToeBlock
      * @throws IllegalArgumentException When the given game is null
      */
     public TicTacToeBlock(TicTacToeGame game) {
-	super();
+        super();
 
-	if (game == null) {
-	    throw new IllegalArgumentException("The game must be non-null.");
-	}
-	
-	this.game = game;
-	this.reset();
+        if (game == null) {
+            throw new IllegalArgumentException("The game must be non-null.");
+        }
+
+        this.game = game;
+        this.reset();
     }
 
     public TicTacToeGame getGame() {
-	return this.game;
+        return this.game;
     }
 
     /**
@@ -46,10 +45,10 @@ public class TicTacToeBlock
      * @throws IllegalArgumentException When the given value is null
      */
     public void setContents(String value) {
-	if (value == null) {
-	    throw new IllegalArgumentException("The value must be non-null.");
-	}
-	this.contents = value;
+        if (value == null) {
+            throw new IllegalArgumentException("The value must be non-null.");
+        }
+        this.contents = value;
     }
 
     /**
@@ -58,22 +57,22 @@ public class TicTacToeBlock
      * @return The non-null String value
      */
     public String getContents() {
-	return this.contents;
+        return this.contents;
     }
 
     public void setIsLegalMove(boolean isLegalMove) {
-	this.isLegalMove = isLegalMove;
+        this.isLegalMove = isLegalMove;
     }
 
     public boolean getIsLegalMove() {
-	return this.isLegalMove;
+        return this.isLegalMove;
     }
 
     /**
      * Resets this block before starting a new game.
      */
     public void reset() {
-	this.contents = "";
-	this.isLegalMove = false;
+        this.contents = "";
+        this.isLegalMove = false;
     }
 }
